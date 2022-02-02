@@ -1,8 +1,8 @@
 FROM node:17-alpine3.15
 
-WORKDIR /usr/src/app
+WORKDIR /app
 
-COPY package*.json .
+COPY ["package.json", "yarn.lock", "./"]
 RUN yarn install
 
 COPY . .
