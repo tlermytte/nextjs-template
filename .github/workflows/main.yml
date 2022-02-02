@@ -17,4 +17,6 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Run app
-        run: yarn lint
+        run: |
+          yarn install
+          yarn lint
